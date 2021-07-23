@@ -54,7 +54,7 @@ export function AlurakutMenu({ githubUser }) {
 }
 AlurakutMenu.Wrapper = styled.header`
   width: 100%;
-  background-color: #308BC5;
+  background-color: #454545;
   .alurakutMenuProfileSidebar {
     background: white;
     position: fixed;
@@ -80,7 +80,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
     .boxLink {
       font-size: 18px;
-      color: #2E7BB4;
+      color: #454545;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 800;
@@ -89,11 +89,11 @@ AlurakutMenu.Wrapper = styled.header`
       margin-top: 12px;
       margin-bottom: 8px;
       border-color: transparent;
-      border-bottom-color: #ECF2FA;
+      border-bottom-color: #bababa;
     }
   }
   .container {
-    background-color: #308BC5;
+    background-color: #45454545;
     padding: 7px 16px;
     max-width: 1110px;
     margin: auto;
@@ -120,16 +120,16 @@ AlurakutMenu.Wrapper = styled.header`
       }
       a {
         font-size: 12px;
-        color: white;
+        color: #bababa;
         padding: 10px 16px;
         position: relative;
         text-decoration: none;
         &:after {
-          content: " ";
-          background-color: #5292C1;
+          content: "  ";
+          background-color: #000000;
           display: block;
           position: absolute;
-          width: 1px;
+          width: 0;
           height: 12px;
           margin: auto;
           left: 0;
@@ -140,7 +140,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
     input {
       color: #ffffff;
-      background: #5579A1;
+      background: #151515;
       padding: 10px 42px;
       border: 0;
       background-image: url(${`${BASE_URL}/icons/search.svg`});
@@ -149,14 +149,14 @@ AlurakutMenu.Wrapper = styled.header`
       border-radius: 1000px;
       font-size: 12px;
       ::placeholder {
-        color: #ffffff;
+        color: #bababa;
         opacity: 1;
       }
     } 
   }
 `;
 AlurakutMenu.Logo = styled.img`
-  background-color: #ffffff;
+  background-color: #151515;
   padding: 9px 14px;
   border-radius: 1000px;
   height: 34px;
@@ -222,7 +222,7 @@ export function AlurakutProfileSidebarMenuDefault() {
 AlurakutProfileSidebarMenuDefault.Wrapper = styled.div`
   a {
     font-size: 12px;
-    color: #2E7BB4;
+    color: #bababa;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
@@ -255,7 +255,7 @@ export function OrkutNostalgicIconSet(props) {
           </span>
           <span className="OrkutNostalgicIconSet__number" style={{ gridArea: 'number' }}>
             <img key={`orkut__icon_set__${slug}_img`} className="OrkutNostalgicIconSet__iconSample" src={`https://alurakut.vercel.app/icons/${icon}.svg`} />
-            {props[slug] ? props[slug] : 0}
+            {props[slug] ? props[slug] : 9999}
           </span>
         </li>
       ))}
@@ -273,7 +273,7 @@ export function OrkutNostalgicIconSet(props) {
             <span className="OrkutNostalgicIconSet__iconComplex" className="OrkutNostalgicIconSet__number" style={{ gridArea: 'number' }}>
               {[0, 1, 2].map((_, index) => {
                 const isHeartActive = index <= (total - 1);
-                return <img key={`orkut__icon_set__${slug}_img_${index}`} src={`https://alurakut.vercel.app/icons/${icon}.svg`} style={{ marginRight: '2px', opacity: isHeartActive ? 1 : '0.5' }} />
+                return <img key={`orkut__icon_set__${slug}_img_${index}`} src={`https://alurakut.vercel.app/icons/${icon}.svg`} style={{ marginRight: '2px', opacity: isHeartActive ? 1 : '1.0' }} />
               })}
             </span>
           </li>
@@ -290,7 +290,7 @@ OrkutNostalgicIconSet.List = styled.ul`
   flex-wrap: wrap;
   li {
     font-size: 12px;
-    color: #5A5A5A;
+    color: #bababa;
     display: grid;
     grid-template-areas:
       "title title"
